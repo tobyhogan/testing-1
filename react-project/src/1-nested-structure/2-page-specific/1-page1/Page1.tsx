@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import FontControlPanel from "./components/FontControlPanel";
 import FontPreview from "./components/FontPreview";
-import { PREVIEW_TEXT } from "./utils/constants";
+import { PREVIEW_TEXT, loadGoogleFonts } from "./utils/constants";
 
 const STORAGE_KEYS = {
   FONT: "fontPreview_selectedFont",
@@ -27,6 +27,11 @@ const Page1 = () => {
   const [previewText, setPreviewText] = useState(() => 
     localStorage.getItem(STORAGE_KEYS.TEXT) || PREVIEW_TEXT
   );
+
+  // Load Google Fonts dynamically from FONT_CONFIG
+  useEffect(() => {
+    loadGoogleFonts();
+  }, []);
 
   // Persist to localStorage whenever values change
   useEffect(() => {
