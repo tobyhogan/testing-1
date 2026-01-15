@@ -1,0 +1,70 @@
+rvtsxpt-webapp-1-template/
+├── index.html
+├── package.json
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+├── postcss.config.js
+├── tailwind.config.js
+├── tsconfig.json
+├── tsconfig.node.json
+├── vercel.json
+├── vite.config.ts
+├── z-agent-rules.txt
+├── z-how-to-run.txt
+├── z-project-notes.txt
+├── a-file-tools/
+│   ├── archive/
+│   │   └── test.txt
+│   └── hold/
+│       └── test.txt
+├── public/
+│   └── test..txt
+├── src/
+│   ├── App.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   ├── 1-components-&-utilities/
+│   │   ├── 1-general-structure/
+│   │   │   ├── 1-utilities/
+│   │   │   │   └── delete-me.txt
+│   │   │   └── 2-components/
+│   │   │       └── Header.tsx
+│   │   └── 2-page-specific/
+│   │       ├── 1-page1/
+│   │       │   ├── 1-utilities/
+│   │       │   │   └── delete-me.txt
+│   │       │   └── 2-components/
+│   │       │       └── Component1.tsx
+│   │       └── 1-page2/
+│   │           ├── 1-utilities/
+│   │           │   └── delete-me.txt
+│   │           └── 2-components/
+│   │               └── Component1.tsx
+│   ├── config/
+│   │   └── defaults.ts
+│   ├── contexts/
+│   │   └── ThemeContext.tsx
+│   └── pages/
+│       ├── Page1.tsx
+│       ├── Page2.tsx
+│       ├── Settings.tsx
+│       ├── y-UploadDataPage.tsx
+│       └── z-DataDisplayingPage.tsx
+├── x-random/
+│   └── structure1.txt
+├── x-scripts/
+│   └── remove-comments.js
+├── x-utilities/
+│   ├── PageTemplate.tsx
+│   ├── components/
+│   │   └── Reroute.js
+│   └── hooks/
+│       └── useDocumentTitle.ts
+└── z-planning-tools/
+    ├── 1-to-do-1.txt
+    ├── z-template-notes.txt
+    ├── z-template-text.txt
+    └── archive/
+        ├── ideas-1.txt
+        ├── planning-1.txt
+        └── random.txt

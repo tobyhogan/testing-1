@@ -1,0 +1,18 @@
+note 1:
+
+
+
+the packages below in the package.json file are used for the remove-comments.js script only at the moment:
+
+  "@babel/parser": "^7.23.0",
+  "@babel/traverse": "^7.23.0",
+  "@babel/generator": "^7.23.0"
+
+
+
+
+
+note 2:
+
+
+

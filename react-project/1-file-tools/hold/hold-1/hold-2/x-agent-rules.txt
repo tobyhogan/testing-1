@@ -1,0 +1,5 @@
+
+- do not add comments to files created or worked on, unless the user asks for that
+
+
+

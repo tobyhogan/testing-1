@@ -1,0 +1,18 @@
+how to run:
+
+
+general => "npm run dev"
+
+
+specific files:
+
+
+"node path-if-present/script-name-here.js"
+
+i.e.:
+
+
+"node scripts/sync-conversations.js"
+
+
+

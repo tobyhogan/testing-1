@@ -1,0 +1,9 @@
+I want to make this project well:
+
+comprehensible, understandable
+maintainable
+easy to make new features
+debuggable, segregated
+can you look at it and see if you have any recommendations, look at splitting up large files into smaller files, extracting functionality to seperate it logically.
+
+thanks.

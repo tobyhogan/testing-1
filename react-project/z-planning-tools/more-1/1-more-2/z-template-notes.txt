@@ -1,0 +1,2 @@
+
+- have included some files like vercel.json which are not needed for all configurations, these can be deleted if not needed

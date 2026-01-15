@@ -1,0 +1,16 @@
+
+
+
+flat structure area => 
+
+
+    - "src\1-flat-structure"
+
+
+deeper structure area => 
+
+
+
+    - "src\1-components-&-utilities"
+
+
