@@ -33,6 +33,11 @@ const Page1 = () => {
     loadGoogleFonts();
   }, []);
 
+  // Set page title
+  useEffect(() => {
+    document.title = "Font Preview Tool";
+  }, []);
+
   // Persist to localStorage whenever values change
   useEffect(() => {
     localStorage.setItem(STORAGE_KEYS.FONT, selectedFont);
