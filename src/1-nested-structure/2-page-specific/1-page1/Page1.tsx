@@ -9,6 +9,7 @@ const STORAGE_KEYS = {
   COLOR: "fontPreview_fontColor",
   WEIGHT: "fontPreview_fontWeight",
   TEXT: "fontPreview_previewText",
+  SHOW_CONTROLS: "fontPreview_showControls",
 };
 
 const Page1 = () => {
@@ -26,6 +27,9 @@ const Page1 = () => {
   );
   const [previewText, setPreviewText] = useState(() => 
     localStorage.getItem(STORAGE_KEYS.TEXT) || PREVIEW_TEXT
+  );
+  const [showControls, setShowControls] = useState(() => 
+    localStorage.getItem(STORAGE_KEYS.SHOW_CONTROLS) !== "false"
   );
 
   // Load Google Fonts dynamically from FONT_CONFIG
@@ -59,22 +63,31 @@ const Page1 = () => {
     localStorage.setItem(STORAGE_KEYS.TEXT, previewText);
   }, [previewText]);
 
-  return (
-    <div className="p-6 min-h-screen dark:bg-gray-900">
-      <h1 className="text-3xl font-bold mb-8 dark:text-white">Font Preview Tool</h1>
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEYS.SHOW_CONTROLS, showControls.toString());
+  }, [showControls]);
 
-      <FontControlPanel
-        selectedFont={selectedFont}
-        setSelectedFont={setSelectedFont}
-        fontSize={fontSize}
-        setFontSize={setFontSize}
-        fontColor={fontColor}
-        setFontColor={setFontColor}
-        fontWeight={fontWeight}
-        setFontWeight={setFontWeight}
-        previewText={previewText}
-        setPreviewText={setPreviewText}
-      />
+  return (
+
+    <div className="p-6 min-h-screen dark:bg-gray-900">
+
+      {/* Toggle Controls Checkbox */}
+
+      <div className="mt-8 mb-6">
+
+
+        <label className="flex items-center gap-2 cursor-pointer w-fit">
+          <input
+            type="checkbox"
+            checked={showControls}
+            onChange={(e) => setShowControls(e.target.checked)}
+            className="w-5 h-5 rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-2 focus:ring-blue-500 cursor-pointer"
+          />
+          <span className="text-sm font-medium dark:text-gray-200"></span>
+        </label>
+      </div>
+
+      <div className="mt-12"></div>
 
       <FontPreview
         font={selectedFont}
@@ -82,7 +95,30 @@ const Page1 = () => {
         color={fontColor}
         weight={fontWeight}
         text={previewText}
-      />
+        />
+        
+      {showControls && (
+        <>
+
+          <h1 className="text-3xl font-bold mb-8 dark:text-white mt-12">Font Preview Tool</h1>
+
+          <FontControlPanel
+            selectedFont={selectedFont}
+            setSelectedFont={setSelectedFont}
+            fontSize={fontSize}
+            setFontSize={setFontSize}
+            fontColor={fontColor}
+            setFontColor={setFontColor}
+            fontWeight={fontWeight}
+            setFontWeight={setFontWeight}
+            previewText={previewText}
+            setPreviewText={setPreviewText}
+            />
+        </>
+        
+      )}
+
+
     </div>
   );
 };
