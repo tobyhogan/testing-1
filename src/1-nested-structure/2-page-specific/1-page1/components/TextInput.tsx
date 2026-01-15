@@ -20,7 +20,7 @@ const TextInput = ({ value, onChange }: TextInputProps) => {
   return (
     <div>
       <label className="block text-sm font-medium mb-2 dark:text-gray-200">
-        Preview Text
+        Hello World
       </label>
       <textarea
         ref={textareaRef}

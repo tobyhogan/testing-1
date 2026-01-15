@@ -71,9 +71,9 @@ const Page1 = () => {
 
     <div className="p-6 min-h-screen dark:bg-gray-900">
 
-      {/* Toggle Controls Checkbox */}
+      <div className="mt-[30px]"></div>
 
-      <div className="mt-8 mb-6">
+      <div className="mb-6">
 
 
         <label className="flex items-center gap-2 cursor-pointer w-fit">
@@ -87,7 +87,7 @@ const Page1 = () => {
         </label>
       </div>
 
-      <div className="mt-12"></div>
+      <div className="mt-[70px]"></div>
 
       <FontPreview
         font={selectedFont}
@@ -95,12 +95,14 @@ const Page1 = () => {
         color={fontColor}
         weight={fontWeight}
         text={previewText}
-        />
+      />
+
+      <div className="mt-10"></div>
         
       {showControls && (
         <>
 
-          <h1 className="text-3xl font-bold mb-8 dark:text-white mt-10">Font Preview Tool</h1>
+          <h1 className="text-3xl font-bold mb-8 dark:text-white">Font Preview Tool</h1>
 
           <FontControlPanel
             selectedFont={selectedFont}
