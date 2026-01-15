@@ -100,7 +100,7 @@ const Page1 = () => {
       {showControls && (
         <>
 
-          <h1 className="text-3xl font-bold mb-8 dark:text-white mt-12">Font Preview Tool</h1>
+          <h1 className="text-3xl font-bold mb-8 dark:text-white mt-10">Font Preview Tool</h1>
 
           <FontControlPanel
             selectedFont={selectedFont}
