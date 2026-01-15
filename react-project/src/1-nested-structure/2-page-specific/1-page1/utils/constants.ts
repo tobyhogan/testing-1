@@ -8,7 +8,7 @@ export const PREVIEW_TEXT =
 
 // Font configuration - single source of truth
 export const FONT_CONFIG = [
-  { name: "Sans-serif", fallback: "sans-serif", isWebFont: true },
+  { name: "Sans-serif", fallback: "sans-serif", isWebFont: false },
   { name: "Monospace", fallback: "monospace", isWebFont: false },
   { name: "Montserrat", fallback: "sans-serif", isWebFont: true },
   { name: "Nunito", fallback: "sans-serif", isWebFont: true },
