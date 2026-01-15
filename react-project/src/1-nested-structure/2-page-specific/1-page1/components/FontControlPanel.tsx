@@ -2,6 +2,7 @@ import FontSelector from "./FontSelector";
 import FontSizeSlider from "./FontSizeSlider";
 import ColorPicker from "./ColorPicker";
 import FontWeightSelector from "./FontWeightSelector";
+import TextInput from "./TextInput";
 
 interface FontControlPanelProps {
   selectedFont: string;
@@ -12,6 +13,8 @@ interface FontControlPanelProps {
   setFontColor: (value: string) => void;
   fontWeight: number;
   setFontWeight: (value: number) => void;
+  previewText: string;
+  setPreviewText: (value: string) => void;
 }
 
 const FontControlPanel = ({
@@ -23,6 +26,8 @@ const FontControlPanel = ({
   setFontColor,
   fontWeight,
   setFontWeight,
+  previewText,
+  setPreviewText,
 }: FontControlPanelProps) => {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-8">
@@ -31,6 +36,9 @@ const FontControlPanel = ({
         <FontSizeSlider value={fontSize} onChange={setFontSize} />
         <ColorPicker value={fontColor} onChange={setFontColor} />
         <FontWeightSelector value={fontWeight} onChange={setFontWeight} />
+      </div>
+      <div className="mt-6">
+        <TextInput value={previewText} onChange={setPreviewText} />
       </div>
     </div>
   );
