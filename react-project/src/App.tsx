@@ -1,8 +1,16 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { ThemeProvider } from './contexts/ThemeContext'
-import Header from './2-flat-structure/general-components/Header.tsx'
 import Page1 from './pages/Page1'
 import Page2 from './pages/Page2'
+
+
+/*
+
+import Header from './2-flat-structure/general-components/Header.tsx'
+
+
+*/
+
 
 //import UploadDataPage from './pages/y-UploadDataPage'
 //import DataDisplayingPage from './pages/z-DataDisplayingPage'
@@ -19,7 +27,7 @@ function App() {
         }}
       >
         <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 transition-colors">
-          <Header />
+
           <main className="container mx-auto px-4 py-8">
             <Routes>
 
@@ -42,6 +50,9 @@ export default App
 
 
 /*
+
+
+          <Header />
 
 <Route path="/upload" element={<UploadDataPage />} />
 <Route path="/view-data" element={<DataDisplayingPage />} />
