@@ -14,6 +14,7 @@ export const FONT_CONFIG = [
   { name: "Georgia", fallback: "serif", isWebFont: false },
   { name: "Libre Franklin", fallback: "sans-serif", isWebFont: true },
   { name: "Courier New", fallback: "monospace", isWebFont: false },
+  { name: "Dosis", fallback: "sans-serif", isWebFont: true },
 ];
 
 export const FONT_WEIGHTS = [100, 300, 400, 500, 600, 700, 900];
