@@ -24,18 +24,33 @@ const FontWeightSelector = ({ value, onChange }: FontWeightSelectorProps) => {
           {getFontWeightLabel(value)} ({value})
         </span>
       </label>
-      <input
-        type="range"
-        min="0"
-        max={FONT_WEIGHTS.length - 1}
-        step="1"
-        value={sliderIndex}
-        onChange={(e) => handleSliderChange(Number(e.target.value))}
-        className="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-blue-600"
-      />
-      <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
-        <span>{getFontWeightLabel(FONT_WEIGHTS[0])}</span>
-        <span>{getFontWeightLabel(FONT_WEIGHTS[FONT_WEIGHTS.length - 1])}</span>
+      <div className="relative pt-1 pb-6">
+        <input
+          type="range"
+          min="0"
+          max={FONT_WEIGHTS.length - 1}
+          step="1"
+          value={sliderIndex}
+          onChange={(e) => handleSliderChange(Number(e.target.value))}
+          className="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-blue-600"
+        />
+        {/* Tick marks */}
+        <div className="absolute top-[9px] left-0 right-0 flex justify-between px-[6px] pointer-events-none">
+          {FONT_WEIGHTS.map((weight) => (
+            <div
+              key={weight}
+              className="w-1 h-1 rounded-full bg-gray-400 dark:bg-gray-500"
+            />
+          ))}
+        </div>
+        {/* Weight labels */}
+        <div className="absolute top-[20px] left-0 right-0 flex justify-between text-[10px] text-gray-500 dark:text-gray-400">
+          {FONT_WEIGHTS.map((weight) => (
+            <span key={weight} className="text-center" style={{ width: '28px' }}>
+              {weight}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );
