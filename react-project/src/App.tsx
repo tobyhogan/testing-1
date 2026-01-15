@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { ThemeProvider } from './contexts/ThemeContext'
-import Page1 from './pages/Page1'
+import Page1 from './1-nested-structure/2-page-specific/1-page1/Page1'
 import Page2 from './pages/Page2'
 
 
